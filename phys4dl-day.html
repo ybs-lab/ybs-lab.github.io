@@ -12,11 +12,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <style>
-      th {
-          width: 70px;
-      }
-  </style>
 </head>
 
 <body>
@@ -77,155 +72,29 @@
                 <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdC4cjz8mxtlT4ge_xpQEefMRnFb3sqjO4yextnq7fz1ut8PA/viewform?usp=sf_link" target="_blank" role="button">Registration</a>
             </div>
         </div>
-        
-        <hr class="my-4">
+
+        <!-- Program Card
         <div class="card mb-3">
-            <div class="card-header">
-                <h2>Program</h2> <h3>(click for abstracts)</h3>
-            </div>
             <div class="card-body">
-                <table class="table table-hover table-striped-columns">
-                    <tbody>
-                      <tr class="table-primary">
-                        <th colspan="1">9:30</th>
-                        <td colspan="2">Coffee, light refreshments and mingling</td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract1" aria-expanded="false" aria-controls="abstract1">
-                        <th>10:00</th>
-                        <td>Zohar Ringel (HUJI)</td>
-                        <td>Title: TBA</td>
-                      </tr>
-                      <tr id="_abstract1" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Abstract for Zohar Ringel's talk goes here.
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract2" aria-expanded="false" aria-controls="abstract2">
-                        <th>10:40</th>
-                        <td>Nadav Cohen (TAU)</td>
-                        <td>What Makes Data Suitable for Deep Learning?</td>
-                      </tr>
-                      <tr id="abstract2" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Deep learning is delivering unprecedented performance when applied to various data modalities, yet there are data distributions over which it utterly fails. The question of what makes a data distribution suitable for deep learning is a fundamental open problem in the field.  In this talk I will present a recent theory aiming to address the problem via tools from quantum physics.  The theory establishes that certain neural networks are capable of accurate prediction over a data distribution if and only if the data distribution admits low quantum entanglement under certain partitions of features.  This brings forth practical methods for adaptation of data to neural networks, and vice versa.  Experiments with widespread models over various datasets will demonstrate the findings.  An underlying theme of the talk will be the potential of physics to advance our understanding of the relation between deep learning and real-world data.
-                            The talk is based on NeurIPS 2023 papers co-authored with my students Noam Razin, Yotam Alexander, Nimrod De La Vega and Tom Verbin.
-                          
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract3" aria-expanded="false" aria-controls="abstract3">
-                        <th>11:20</th>
-                        <td>Harel Kol-Namer (TAU)</td>
-                        <td>Neural Network Ground State from the Neural Tangent Kernel Perspective: The Sign Bias</td>
-                      </tr>
-                      <tr id="abstract3" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Neural networks has recently attracted much interest as useful representations of quantum many body ground states. Most attention was directed at their representability properties, while possible limitations on finding the desired optimal state have not been suitably explored. By leveraging well-established results applicable in the context of infinite width, specifically regarding the renowned neural tangent kernel and conjugate kernel, a comprehensive analysis of the convergence and initialization characteristics of the method is conducted. The paper illustrates the dependence of these characteristics on the interplay among these kernels, the Hamiltonian, and the basis used for its representation. We introduce and motivate novel performance metrics and explore the condition for their optimization. By leveraging these findings, we elucidate a substantial dependence of the effectiveness of this approach on the selected basis, demonstrating that so-called “stoquastic” Hamiltonians are more amenable to solution through neural networks.
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract4" aria-expanded="false" aria-controls="abstract4">
-                        <th>11:40</th>
-                        <td>Ori Shem-Ur (TAU)</td>
-                        <td>Weak Correlations as the Underlying Principle for Linearization of Gradient-Based Learning Systems</td>
-                      </tr>
-                      <tr id="abstract4" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Deep learning models, such as wide neural networks, can be conceptualized as nonlinear dynamical physical systems characterized by a multitude of interacting degrees of freedom. Such systems, in the limit of an infinite number of degrees of freedom, tend to exhibit simplified dynamics. This paper delves into gradient descent-based learning algorithms that display a linear structure in their parameter dynamics, reminiscent of the neural tangent kernel. We establish that this apparent linearity arises due to weak correlations between the first and higher-order derivatives of the hypothesis function with respect to the parameters taken around their initial values. This insight suggests that these weak correlations could be the underlying cause behind the observed linearization in such systems. As a case in point, we showcase this weak correlations structure within neural networks in the large width limit. Utilizing this relationship between linearity and weak correlations, we derive a bound on the deviation from linearity during the training trajectory of stochastic gradient descent. To facilitate our proof, we introduce a novel method to characterize the asymptotic behavior of random tensors. We empirically verify our findings and present a comparison between the linearization of the system and the observed correlations.
-                        </td>
-                      </tr>
-                      <tr class="table-danger">
-                        <th colspan="1">12:00</th>
-                        <td colspan="2">Lunch</td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract5" aria-expanded="false" aria-controls="abstract5">
-                        <th>13:00</th>
-                        <td>Noam Levi (TAU/EPFL)</td>
-                        <td>Title: TBA</td>
-                      </tr>
-                      <tr id="_abstract5" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Abstract for Noam Levi's talk goes here.
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract6" aria-expanded="false" aria-controls="abstract6">
-                        <th>13:40</th>
-                        <td>Gon Buzaglo (Technion)</td>
-                        <td>Typical Interpolating Neural Networks Generalize with Narrow Teachers</td>
-                      </tr>
-                      <tr id="abstract6" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            A main theoretical puzzle is why over-parameterized Neural Networks (NNs) generalize well when trained to zero error (i.e., so they interpolate the data). Usually, the NN is trained with Stochastic Gradient Descent (SGD) or one of its variants. However, recent empirical work examined the generalization of a random NN that interpolates the data: the NN was sampled from a seemingly uniform prior over the parameters, conditioned on that the NN perfectly classifying the training set. Interestingly, such a NN sample typically generalized as well as SGD-trained NNs. I will talk about our new paper, where we prove that such a random NN interpolator typically generalizes well if there exists an underlying narrow “teacher NN” that agrees with the labels. Specifically, we show that such a ‘flat’ prior over the NN parametrization induces a rich prior over the NN functions, due to the redundancy in the NN structure. In particular, this creates a bias towards simpler functions, which require less relevant parameters to represent — enabling learning with a sample complexity approximately proportional to the complexity of the teacher (roughly, the number of non-redundant parameters), rather than the student’s.
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract7" aria-expanded="false" aria-controls="abstract7">
-                        <th>14:10</th>
-                        <td>Itay Lavie (HUJI)</td>
-                        <td>Towards Understanding Inductive Bias in Transformers: A View From Infinity</td>
-                      </tr>
-                      <tr id="abstract7" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            We study inductive bias in Transformers in the infinitely over-parameterized Gaussian process limit and argue transformers tend to be biased towards more permutation symmetric functions in sequence space. We show that the representation theory of the symmetric group can be used to give quantitative analytical predictions when the dataset is symmetric to permutations between tokens. We show that in common setups, one can derive tight bounds in the form of a scaling law for the learnability as a function of the context length. Finally, we argue WikiText dataset, does indeed possess a degree of permutation symmetry. 
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract8" aria-expanded="false" aria-controls="abstract8">
-                        <th>14:30</th>
-                        <td>Uri Cohen (Univ. of Cambridge)</td>
-                        <td>Title: TBA</td>
-                      </tr>
-                      <tr id="_abstract8" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Abstract for Uri Cohen's talk goes here.
-                        </td>
-                      </tr>
-                      <tr class="table-primary">
-                        <th>14:50</th>
-                        <td colspan="2">Coffee and cookies</th>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract9" aria-expanded="false" aria-controls="abstract9">
-                        <th>15:30</th>
-                        <td>Ran Darshan (TAU)</td>
-                        <td>Title: TBA</td>
-                      </tr>
-                      <tr id="_abstract9" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Abstract for Ran Darshan's talk goes here.
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract10" aria-expanded="false" aria-controls="abstract10">
-                        <th>16:10</th>
-                        <td>Yonatan Kadmon (HUJI)</td>
-                        <td>Title: TBA</td>
-                      </tr>
-                      <tr id="_abstract10" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            Abstract for Yonatan Kadmon's talk goes here.
-                        </td>
-                      </tr>
-                      <tr data-toggle="collapse" data-target="#abstract11" aria-expanded="false" aria-controls="abstract11">
-                        <th>16:50-17:30</th>
-                        <td>Yoav Lahini (TAU)</td>
-                        <td>Analyzing quantum dynamics with generative Al</td>
-                      </tr>
-                      <tr id="abstract11" class="collapse">
-                        <th></th>
-                        <td colspan="2" style="font-size: smaller">
-                            We show that generative AI can be used to simulate and analyze a simple physical problem - the correlated quantum walk of two Bosons on a disordered lattice. After training on a dataset of unlabeled examples representing the realization of disorder and the state of the system after some propagation time, the algorithm manages to generate new, unseen examples with the correct physics. Probing the trained network's latent space reveals the underlying physical parameters and allows exploring their effect on the dynamics. 
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                
+                <h3 class="card-title">Confirmed speakers</h3>
+                <p class="card-text">Will be announced soon...</p>
+                <ul>
+                    <li>Yonathan Kadmon (HUJI)</li>
+                    <li>Noam Levi (EPFL)</li>
+                    <li>Ran Darshan (TAU)</li>
+                    <li>Uri Cohen (TAU)</li>
+                    <li>Zohar Ringel (HUJI)</li>
+                </ul>
+                <ul>
+                    <li>9:30 AM - Opening Remarks</li>
+                    <li>10:00 AM - Keynote: The Intersection of Physics and Deep Learning</li>
+                    <li>11:00 AM - Panel Discussion: Challenges in Deep Learning Research</li>
+                    <li>12:00 PM - Lunch Break</li>
+                    <li>1:00 PM - Workshop: Hands-on with Quantum Machine Learning</li>
+                    <li>3:00 PM - Closing Ceremony</li>
+                </ul>
             </div>
-        </div>
+        </div> -->
 
         <div class="mt-4">
             <h2>Organizers</h2>
@@ -242,21 +111,6 @@
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('tr').each(function() {
-          var secondChild = $(this).children('td:nth-child(2), th:nth-child(2)');
-          if (secondChild.attr('colspan') === undefined) {
-            secondChild.css('width', '200px');
-          }
-        });
-      });
-      $(document).ready(function() {
-        $('tr').each(function() {
-          $(this).children(':nth-child(3)').css('font-size', 'smaller');
-        });
-      });
-    </script>
 </body>
 
 </html>
