@@ -12,6 +12,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+      th {
+          width: 70px;
+      }
+      .clickable-row {
+          cursor: pointer;
+      }
+
+      .arrow-icon {
+          margin-left: 10px;
+          transition: transform 0.3s ease;
+      }
+
+      .clickable-row[aria-expanded="true"] .arrow-icon {
+          transform: rotate(90deg);
+      }
+  </style>
 </head>
 
 <body>
@@ -51,19 +68,6 @@
                 <br>
                 The number of participants is limited, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSdC4cjz8mxtlT4ge_xpQEefMRnFb3sqjO4yextnq7fz1ut8PA/viewform?usp=sf_link" target="_blank">register</a> early.
             </p>
-            <h3 class="card-title">Confirmed speakers</h3>
-            <!-- <p class="card-text">Will be announced soon...</p> -->
-            <p>
-
-                <ul>
-                    <li><a href="https://www.neuro-theory.org/" target="_blank"> Yonathan Kadmon</a> (HUJI)</li>
-                    <li>Noam Levi (EPFL)</li>
-                    <li><a href="https://darshanlab.sites.tau.ac.il/" target="_blank"> Ran Darshan</a> (TAU)</li>
-                    <li><a href="https://uricohen.github.io/" target="_blank"> Uri Cohen</a> (University of Cambridge)</li>
-                    <li><a href="http://old.phys.huji.ac.il/~zohar.ringel/" target="_blank">Zohar Ringel</a> (HUJI)</li>
-                    <li><a href="https://www.cohennadav.com/" target="_blank">Nadav Cohen</a> (TAU)</li>
-                </ul>
-            </p>
             <hr class="my-4">
             <p style="text-align: center; font-size: smaller;">
                 Attendance is free, but registration is required. The number of participants is limited.
@@ -72,29 +76,183 @@
                 <a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdC4cjz8mxtlT4ge_xpQEefMRnFb3sqjO4yextnq7fz1ut8PA/viewform?usp=sf_link" target="_blank" role="button">Registration</a>
             </div>
         </div>
-
-        <!-- Program Card
+        
+        <hr class="my-4">
         <div class="card mb-3">
-            <div class="card-body">
-                <h3 class="card-title">Confirmed speakers</h3>
-                <p class="card-text">Will be announced soon...</p>
-                <ul>
-                    <li>Yonathan Kadmon (HUJI)</li>
-                    <li>Noam Levi (EPFL)</li>
-                    <li>Ran Darshan (TAU)</li>
-                    <li>Uri Cohen (TAU)</li>
-                    <li>Zohar Ringel (HUJI)</li>
-                </ul>
-                <ul>
-                    <li>9:30 AM - Opening Remarks</li>
-                    <li>10:00 AM - Keynote: The Intersection of Physics and Deep Learning</li>
-                    <li>11:00 AM - Panel Discussion: Challenges in Deep Learning Research</li>
-                    <li>12:00 PM - Lunch Break</li>
-                    <li>1:00 PM - Workshop: Hands-on with Quantum Machine Learning</li>
-                    <li>3:00 PM - Closing Ceremony</li>
-                </ul>
+            <div class="card-header">
+                <h2>Program <span style="font-size: smaller;">(click for abstracts)</span></h2>
             </div>
-        </div> -->
+            <div class="card-body">
+                <table class="table table-hover table-striped-columns">
+                    <tbody>
+                      <tr class="table-success">
+                        <th colspan="1">9:30</th>
+                        <td colspan="2">Coffee, light refreshments and mingling</td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstract1" aria-expanded="false" aria-controls="abstract1" class="clickable-row">
+                        <th>10:00</th>
+                        <td>Zohar Ringel (HUJI)</td>
+                        <td>Field theory of deep learning, a potential common language
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstract1" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                          The last several years have seen many new exciting developments in microscopic theories of DNNs: NTK, Eigen-learning, Kernel Scaling, Saad & Sola approaches, Kernel Adaptation, and DMFT, to name a few. Still, having so many drastically different formal approaches, makes it difficult to draw parallels and insights and limits cross-talk in the field. In condensed matter physics, a field which faced similar issues, field theory has emerged not only as a powerful analytical tool but also as a common meeting ground. In the first half of this talk, I’ll give a pedagogical introduction to how two-layer DNNs in the feature learning regime can be written as a field theory and illustrate how this may unify many of those different approaches. I’ll then describe how one can map the phenomena of Grokking to that of first-order phase transitions using this formalism and discuss its implications on sample complexity in the proportional scaling regime.
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstract2" aria-expanded="false" aria-controls="abstract2" class="clickable-row">
+                        <th>10:40</th>
+                        <td>Nadav Cohen (TAU)</td>
+                        <td>What Makes Data Suitable for Deep Learning?
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstract2" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                            Deep learning is delivering unprecedented performance when applied to various data modalities, yet there are data distributions over which it utterly fails. The question of what makes a data distribution suitable for deep learning is a fundamental open problem in the field.  In this talk I will present a recent theory aiming to address the problem via tools from quantum physics.  The theory establishes that certain neural networks are capable of accurate prediction over a data distribution if and only if the data distribution admits low quantum entanglement under certain partitions of features.  This brings forth practical methods for adaptation of data to neural networks, and vice versa.  Experiments with widespread models over various datasets will demonstrate the findings.  An underlying theme of the talk will be the potential of physics to advance our understanding of the relation between deep learning and real-world data.
+                            The talk is based on NeurIPS 2023 papers co-authored with my students Noam Razin, Yotam Alexander, Nimrod De La Vega and Tom Verbin.
+                          
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstract3" aria-expanded="false" aria-controls="abstract3" class="clickable-row">
+                        <th>11:20</th>
+                        <td>Harel Kol-Namer (TAU)</td>
+                        <td>Neural Network Ground State from the Neural Tangent Kernel Perspective: The Sign Bias
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstract3" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                            Neural networks has recently attracted much interest as useful representations of quantum many body ground states. Most attention was directed at their representability properties, while possible limitations on finding the desired optimal state have not been suitably explored. By leveraging well-established results applicable in the context of infinite width, specifically regarding the renowned neural tangent kernel and conjugate kernel, a comprehensive analysis of the convergence and initialization characteristics of the method is conducted. The paper illustrates the dependence of these characteristics on the interplay among these kernels, the Hamiltonian, and the basis used for its representation. We introduce and motivate novel performance metrics and explore the condition for their optimization. By leveraging these findings, we elucidate a substantial dependence of the effectiveness of this approach on the selected basis, demonstrating that so-called “stoquastic” Hamiltonians are more amenable to solution through neural networks.
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstract4" aria-expanded="false" aria-controls="abstract4" class="clickable-row">
+                        <th>11:40</th>
+                        <td>Ori Shem-Ur (TAU)</td>
+                        <td>Weak Correlations as the Underlying Principle for Linearization of Gradient-Based Learning Systems
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstract4" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                            Deep learning models, such as wide neural networks, can be conceptualized as nonlinear dynamical physical systems characterized by a multitude of interacting degrees of freedom. Such systems, in the limit of an infinite number of degrees of freedom, tend to exhibit simplified dynamics. This paper delves into gradient descent-based learning algorithms that display a linear structure in their parameter dynamics, reminiscent of the neural tangent kernel. We establish that this apparent linearity arises due to weak correlations between the first and higher-order derivatives of the hypothesis function with respect to the parameters taken around their initial values. This insight suggests that these weak correlations could be the underlying cause behind the observed linearization in such systems. As a case in point, we showcase this weak correlations structure within neural networks in the large width limit. Utilizing this relationship between linearity and weak correlations, we derive a bound on the deviation from linearity during the training trajectory of stochastic gradient descent. To facilitate our proof, we introduce a novel method to characterize the asymptotic behavior of random tensors. We empirically verify our findings and present a comparison between the linearization of the system and the observed correlations.
+                        </td>
+                      </tr>
+                      <tr class="table-success">
+                        <th colspan="1">12:00</th>
+                        <td colspan="2">Light lunch</td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstract5" aria-expanded="false" aria-controls="abstract5" class="clickable-row">
+                        <th>13:00</th>
+                        <td>Noam Levi (TAU/EPFL)</td>
+                        <td>Universality and Reductionism in Deep Learning
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstract5" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                          How is it that we can describe the complex universe with simple, fundamental rules? <br/>
+                          The equivalence between vastly different, complex physical systems, when observed from afar, allows us to make accurate predictions without analyzing the microscopic details. Conversely, by reducing such systems to their minimal constituents, we can describe phenomena that would otherwise seem inscrutable. In this talk, I will discuss how these notions of universality and reductionism extend beyond the natural universe, to the synthetic world of neural networks. First, I will discuss how aspects of universality appear in the data used to train models, as well as in the models themselves. I will then adopt a reductionist approach to explain emergent phenomena in deep learning, taking Grokking, or delayed generalization, as a case study. Finally, I will explore how aspects of criticality in physical systems correlate with some surprising features of neural networks.
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstractnoa" aria-expanded="false" aria-controls="abstractnoa" class="clickable-row">
+                        <th>13:40</th>
+                        <td>Noa Rubin (HUJI)</td>
+                        <td>Grokking as a first-order phase transition in two-layer networks
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                        
+                      </tr>
+                      <tr id="abstractnoa" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                          A key property of deep neural networks (DNNs) is their ability to learn new features during training. This intriguing aspect of deep learning stands out most clearly in recently reported Grokking phenomena. While mainly reflected as a sudden increase in test accuracy, Grokking is also believed to be a beyond lazylearning/Gaussian Process (GP) phenomenon involving feature learning. Here we apply a recent development in the theory of feature learning, the adaptive kernel approach, to two teacher-student models with cubic-polynomial and modular addition teachers. We provide analytical predictions on feature learning and Grokking properties of these models and demonstrate a mapping between Grokking and the theory of phase transitions. We show that after Grokking, the state of the DNN is analogous to the mixed phase following a first-order phase transition. In this mixed phase, the DNN generates useful internal representations of the teacher that are sharply distinct from those before the transition.
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstractgon" aria-expanded="false" aria-controls="abstractgon" class="clickable-row">
+                        <th>14:10</th>
+                        <td>Gon Buzaglo (Technion)</td>
+                        <td>Typical Interpolating Neural Networks Generalize with Narrow Teachers
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstractgon" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                            A main theoretical puzzle is why over-parameterized Neural Networks (NNs) generalize well when trained to zero error (i.e., so they interpolate the data). Usually, the NN is trained with Stochastic Gradient Descent (SGD) or one of its variants. However, recent empirical work examined the generalization of a random NN that interpolates the data: the NN was sampled from a seemingly uniform prior over the parameters, conditioned on that the NN perfectly classifying the training set. Interestingly, such a NN sample typically generalized as well as SGD-trained NNs. I will talk about our new paper, where we prove that such a random NN interpolator typically generalizes well if there exists an underlying narrow “teacher NN” that agrees with the labels. Specifically, we show that such a ‘flat’ prior over the NN parametrization induces a rich prior over the NN functions, due to the redundancy in the NN structure. In particular, this creates a bias towards simpler functions, which require less relevant parameters to represent — enabling learning with a sample complexity approximately proportional to the complexity of the teacher (roughly, the number of non-redundant parameters), rather than the student’s.
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstractRan" aria-expanded="false" aria-controls="abstractRan" class="clickable-row">
+                        <th>14:30</th>
+                        <td>Ran Darshan (TAU)</td>
+                        <td>Theory for the Emergence of Manifold Attractors in Trained Recurrent Neural Networks
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstractRan" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                          Recurrent neural networks (RNNs) are powerful tools for studying learning and computations in the brain. A classical type of RNN studied in neuroscience is the attractor network, which maps external states to stable internal network states known as attractors. These networks serve as canonical models for diverse brain functions like motor control, sensory amplification, memory, decision-making, and spatial navigation. For example, continuous attractor networks are a dominant model used for understanding how analog variables, such as position or head direction, are encoded in the brain. Within these networks, variables are represented along a continuum of persistent neuronal states, forming a manifold attractor. The prevailing framework supporting such attractor manifolds in RNNs assumes a symmetric connectivity structure of the network. However, this is inconsistent with the diverse synaptic connectivity and neuronal representations observed in experiments. I will present a new theory of manifold attractors that do not rely on symmetries in connectivity but instead emerge in trained RNNs. In such trained networks, a continuous representational space emerges from a small set of stimuli used for training, reminiscent of the inductive bias property of neural networks. Moreover, the theory shows how the geometry of the representation and the level of synaptic heterogeneity affect the network's response to external inputs in an analytically tractable way. Our work demonstrates how manifold attractors can cope with diverse neuronal responses, imperfections in the geometry of the manifold attractor, and a high level of synaptic heterogeneity. It suggests that the functional properties of manifold attractors in the brain can be inferred from the overlooked asymmetries in connectivity and in the low-dimensional representation of the encoded variable.
+                        </td>
+                      </tr>
+                      <tr class="table-success">
+                        <th>15:10</th>
+                        <td colspan="2">Coffee and cookies</th>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstracturi" aria-expanded="false" aria-controls="abstracturi" class="clickable-row">
+                        <th>15:30</th>
+                        <td>Uri Cohen (Univ. of Cambridge)</td>
+                        <td>A theory of memory stability in recurrent networks
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstracturi" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                          The problem of auto-associative memory was historically addressed by constructing neural networks with gradient-based dynamics, where the dynamics follow an energy function. From the seminal work of Hopfield through its many extensions, memory stability is achieved by designing the energy so that memories are close to local minima, but such dynamics are remote from biological plausibility (e.g., might assume symmetric connectivity) and thus fail to offer insights about auto-associative memory in the brain. We take a different path by asking whether a simple, biologically plausible, dynamical system can solve this task. We provide an affirmative answer to this question by framing it as an optimisation problem and showing in simulations it is possible to store memories in the network connectivity such that they are stable fixed points of the recurrent dynamics. Using the replica method from statistical physics, we derive a new analytical theory for the ability to store sparse, graded activity patterns as fixed points of recurrent dynamics and – crucially – for the dynamic stability of those memories during recall. We show how memory stability depends on surprising factors such as the shape of neurons’ input-output function, thus making concrete, experimentally testable predictions about brain circuits hypothesised to be involved in a biological implementation of auto-associative memory. On a broader perspective, questions of dynamical stability in recurrent neural networks were usually addressed only for networks with random connectivity, whereas we provide a novel analytical method capable of describing cases where the connectivity is a non-random solution to an optimisation problem.
+                        </td>
+                      </tr>
+                      <tr data-toggle="collapse" data-target="#abstractitai" aria-expanded="false" aria-controls="abstractitai" class="clickable-row">
+                        <th>16:10</th>
+                        <td>Itay Lavie (HUJI)</td>
+                        <td>Towards Understanding Inductive Bias in Transformers: A View From Infinity
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstractitai" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                            We study inductive bias in Transformers in the infinitely over-parameterized Gaussian process limit and argue transformers tend to be biased towards more permutation symmetric functions in sequence space. We show that the representation theory of the symmetric group can be used to give quantitative analytical predictions when the dataset is symmetric to permutations between tokens. We show that in common setups, one can derive tight bounds in the form of a scaling law for the learnability as a function of the context length. Finally, we argue WikiText dataset, does indeed possess a degree of permutation symmetry. 
+                        </td>
+                      </tr>
+                      <tr>
+                      <tr data-toggle="collapse" data-target="#abstractkadmon" aria-expanded="false" aria-controls="abstract10" class="clickable-row">
+                        <th>16:30</th>
+                        <td>Yonatan Kadmon (HUJI)</td>
+                        <td>High-dimensional Networks in a Low-dimensional World
+                          <i class="fas fa-chevron-right float-end arrow-icon"></i>
+                        </td>
+                      </tr>
+                      <tr id="abstractkadmon" class="collapse">
+                        <th></th>
+                        <td colspan="2" style="font-size: smaller">
+                          This talk explores the intrinsic low-dimensional nature of real-world tasks and environments and its implications for neural network structure. I will discuss two key studies highlighting this principle in deep and recurrent neural networks. The first study demonstrates that low-dimensional error signals suffice to effectively train deep network layers, simplifying computational demands and yielding biologically plausible features. The second study shows that large low-rank neural networks can approximate arbitrary dynamical systems, with error bounds decreasing exponentially with the rank. Together, these studies reveal that aligning network architectures with the low-dimensional constraints of tasks enhances efficiency and biological relevance.
+                        </td>
+                      </tr>
+                        <th>17:15</th>
+                        <td colspan="2">Farewell</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+            </div>
+        </div>
 
         <div class="mt-4">
             <h2>Organizers</h2>
@@ -111,6 +269,21 @@
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('tr').each(function() {
+          var secondChild = $(this).children('td:nth-child(2), th:nth-child(2)');
+          if (secondChild.attr('colspan') === undefined) {
+            secondChild.css('width', '200px');
+          }
+        });
+      });
+      $(document).ready(function() {
+        $('tr').each(function() {
+          $(this).children(':nth-child(3)').css('font-size', 'smaller');
+        });
+      });
+    </script>
 </body>
 
 </html>
